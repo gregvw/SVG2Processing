@@ -20,6 +20,9 @@ class PathDParser {
     for( String t: tokens ) {
       PathDElement elem = new PathDElement();
       elem.type = t.charAt(0);
+
+      boolean isRelative = Character.isLowerCase(elem.type);
+
       // Split
       String[] values = t.substring(1).replaceAll("^[,\\s]+", "").split("[,\\s]+");
       ArrayList<String> stringValues = new ArrayList<String>(Arrays.asList(values));
@@ -29,6 +32,7 @@ class PathDParser {
         elem.values.add(Float.parseFloat(s));
       }
       System.out.println("size = " + elem.values.size());
+
     }
     
   }
