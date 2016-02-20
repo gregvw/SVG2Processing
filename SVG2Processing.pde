@@ -15,14 +15,7 @@ void setup(){
   for(String path:allPaths) {
   
     SVGPath svgPath = new SVGPath(path); 
-//    System.out.println( svgPath.id + ", " + 
-//                        svgPath.d + ", " +
-//                        svgPath.fill + ", " + 
-//                        svgPath.strokeColor + ", " +
-//                       svgPath.strokeWidth);  
-//
-//       System.out.println(svgPath.d); 
-       ArrayList<PathDElement> elements = new ArrayList<PathDElement>();
+      ArrayList<PathDElement> elements = new ArrayList<PathDElement>();
        dParser.partition(svgPath.d,elements);
   }
 
